@@ -78,6 +78,7 @@ static const struct
     { Qt::Key_Launch0,      "AppUser1" },
     { Qt::Key_Launch1,      "AppUser2" },
     { Qt::Key_Select,       "Select" },
+    //{ Qt::Key_Hyper_L,      "Hyper_L" },
 
     { 0, 0 }
 };

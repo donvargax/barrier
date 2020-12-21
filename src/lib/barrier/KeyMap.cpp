@@ -286,12 +286,14 @@ KeyMap::mapKey(Keystrokes& keys, KeyID id, SInt32 group,
     case kKeyAlt_R:
     case kKeyMeta_L:
     case kKeyMeta_R:
+    case kKeyHyper_L:
     case kKeySuper_L:
     case kKeySuper_R:
     case kKeyAltGr:
     case kKeyCapsLock:
     case kKeyNumLock:
     case kKeyScrollLock:
+        LOG((CLOG_DEBUG1 "trying to set modifiers %04x", desiredMask));
         item = mapModifierKey(keys, id, group, activeModifiers,
                                 currentState, desiredMask, isAutoRepeat);
         break;
@@ -388,7 +390,8 @@ KeyMap::getCommandModifiers() const
             KeyModifierAlt    |
             KeyModifierAltGr  |
             KeyModifierMeta   |
-            KeyModifierSuper;
+            KeyModifierSuper  |
+            KeyModifierHyper;
 }
 
 void

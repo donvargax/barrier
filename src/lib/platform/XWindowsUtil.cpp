@@ -1624,9 +1624,11 @@ XWindowsUtil::getModifierBitForKeySym(KeySym keysym)
 
     case XK_Super_L:
     case XK_Super_R:
+        return kKeyModifierBitSuper;
+
     case XK_Hyper_L:
     case XK_Hyper_R:
-        return kKeyModifierBitSuper;
+        return kKeyModifierBitHyper;
 
     case XK_Mode_switch:
     case XK_ISO_Level3_Shift:

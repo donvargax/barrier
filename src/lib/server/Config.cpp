@@ -23,6 +23,7 @@
 #include "barrier/key_types.h"
 #include "net/XSocket.h"
 #include "base/IEventQueue.h"
+#include "base/Log.h"
 #include "common/stdistream.h"
 #include "common/stdostream.h"
 
@@ -2191,6 +2192,7 @@ IPlatformScreen::KeyInfo* ConfigReadContext::parseKeystroke(const std::string& k
 	if (!barrier::KeyMap::parseModifiers(s, mask)) {
 		throw XConfigRead(*this, "unable to parse key modifiers");
 	}
+    LOG((CLOG_DEBUG1 "parsed key modifier %04x for keystroke %s", mask, s.c_str()));
 
 	KeyID key;
 	if (!barrier::KeyMap::parseKey(s, key)) {

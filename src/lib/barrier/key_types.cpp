@@ -214,5 +214,6 @@ const KeyModifierNameMapEntry kModifierNameMap[] = {
 //    { "ScrollLock",        KeyModifierScrollLock },
     { "Shift",            KeyModifierShift },
     { "Super",            KeyModifierSuper },
+    { "Hyper",            KeyModifierHyper },
     { NULL, 0 },
 };
